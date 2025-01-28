@@ -78,5 +78,8 @@ target/
 # IPython
 profile_default/
 
-# Env Vars
+# Custom exclusions
 *.env
+*.vscode
+error_log.txt
+stock_check_log.txt
