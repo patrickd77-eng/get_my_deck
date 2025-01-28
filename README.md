@@ -33,7 +33,8 @@ py -m pip install -r requirements.txt
 
 If you extend this app, then you can add any new packages that you might add to the requirements file. If you don't want to install packages globally (not a big deal), you can make a virtual env or something.
 
-**REQUIRED: Make and configure Twilio Individual account**
+**REQUIRED: Make and configure Twilio Individual account**:
+
 You'll need a government ID and a trial account. The money should last a good while, it's like 15 USD.
 You'll need to buy a phone number with SMS capabilities in the UK with the trial money.
 You'll also need to register a 'regulatory compliance bundle' so that you're using it legally (hence the government ID).
@@ -88,7 +89,8 @@ STORE_URL="https://store.steampowered.com/sale/steamdeckrefurbished/"
 # ^Used to determine which storefront the app will use. Only tested with UK, sorry!
 ```
 
-6. **REQUIRED: Finally, start the app**: Execute the script using Python. Open a terminal or command prompt, navigate to the get_my_deck containing main.py, and run:
+6. **REQUIRED: Finally, start the app**:
+Execute the script using Python. Open a terminal or command prompt, navigate to the get_my_deck containing main.py, and run:
 
 ```
 python main.py
