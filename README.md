@@ -39,7 +39,7 @@ Then after that:
     py -m pip install -r requirements.txt
     ```
 
-If you extend this then you can add any new packages to the requirements file. If you don't want to install packages globally (not a big deal), you can make a virtual env or something.
+If you extend this then you can add any new packages that you might add to the requirements file. If you don't want to install packages globally (not a big deal), you can make a virtual env or something.
 
 4. **REQUIRED: Make a Twilio Individual account**
 You'll need a government ID and a trial account. The money should last a good while, it's like 15 USD.
@@ -51,7 +51,7 @@ There's plenty of guides online on how to do this.
 
 Create a file called '.env' in the same folder as the codebase. It doesn't need a name, just the extension, so it should indeed just look like .env. Then use the example below to populate it... Where it says "get your own!" you'll need to change those before it'll run.
 
- ```sh
+```
 # Twilio Credentials
 TWILIO_ACCOUNT_SID="get your own!"
 # ^From 'Account Info' in console.twilio.com
@@ -96,9 +96,9 @@ STORE_URL="https://store.steampowered.com/sale/steamdeckrefurbished/"
 
 6. **Now, how do I run the program?**: Execute the script using Python. Open a terminal or command prompt, navigate to the get_my_deck containing main.py, and run:
 
-    ```sh
-    python main.py
-    ```
+```
+python main.py
+```    
 
 That's it. Just leave it running. So long as the terminal window is open and it's writing stuff out, it's active. If it crashes, it'll tell you. If it finds stock, it'll tell you. In either case, you'd need to start it again. To do that, you just repeat the same command in this step.
 
