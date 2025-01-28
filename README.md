@@ -4,13 +4,7 @@ Since there doesn't seem to be any for refurbs out there and definitely no offic
 You can filter for one model or all of them.
 You must read all the steps below.
 
-
-## Disclaimer
-I am not a Python dev by trade, and this is not meant to be a lesson in engineering. There are likely many "non pythonic" things, bad practises and violations of things like DRY/KIS etc. It was a quick hobby project over a few hours, so that I could find out when my preferred SD was in stock. If you like to critique open source repos, feel free to make PRs and I will test and merge when I have time. The code and logging is intentionally verbose so that people who don't code can figure it out and understand what it is doing.
-Please note that pages to the Steam Store's page structure will immediately break the app, this could be silent and overnight. Only a debug and codefix will sort it out.
-This is a heavily modified fork of https://github.com/maroofc/get_my_deck. Thanks to the original authors.
-
-# Instructions for Windows
+# Instructions for running on Windows 10/11 - Start Here
 
 This app will run on Windows (and also should run on Linux), provided you have the necessary dependencies installed. The only files you need to consider are main.py, this readme and an environment variables file. Here are the steps to ensure it runs correctly:
 
@@ -115,9 +109,14 @@ Yes, you can read all the code, it's open source. If you don't know how, you can
 ## Anything else I need?
 You should have permissions to create files/folders wherever you're hosting it. It'll make some basic .txt logs. Obviously it'll need internet too...
 
+## Disclaimer
+I am not a Python dev by trade, and this is not meant to be a lesson in engineering. There are likely many "non pythonic" things, bad practises and violations of things like DRY/KIS etc. It was a quick hobby project over a few hours, so that I could find out when my preferred SD was in stock. If you like to critique open source repos, feel free to make PRs and I will test and merge when I have time. The code and logging is intentionally verbose so that people who don't code can figure it out and understand what it is doing.
+Please note that changes to the Steam Store's page structure will immediately break the app, this could be silent and overnight. Only a debug and codefix will sort it out.
+This is a heavily modified fork of https://github.com/maroofc/get_my_deck. Thanks to the original authors.
+
 # Original author's instructions (for Linux) 
 
-Thanks to https://github.com/maroofc/get_my_deck for starting the idea back in 2023. See their notes below. NOTE: The original author wrote this for a linux environment. It's not tested with my changes for Windows. Their comments relate to the main branch of the repo mentioned above.
+Thanks to https://github.com/maroofc/get_my_deck for starting the idea back in 2023. See their notes below. NOTE: The original author wrote this for a linux environment. It's not tested with my changes for Windows. Their comments relate to the main branch of their repo, which is mentioned above.
 
 "The parts that need editing are in the ## comments.
 
