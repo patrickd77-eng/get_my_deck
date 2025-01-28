@@ -4,9 +4,9 @@ import random
 import time
 from utils.browser import get_browser
 from selenium.webdriver.common.by import By
-from utils.twilio_client import send_message
+from utils.twilio_client import send_message, health_check
 from enums.steam_deck_model import SteamDeckModel
-from config.settings import DEBUG_MODE_ON, SEND_FAILURE_NOTIFICATION_BY_SMS, CHECK_INTERVAL, STORE_URL, TWILIO_TO_NUMBER, TWILIO_FROM_NUMBER, REQUIRED_MODEL #Do not remove these, even if claimed to be unused.
+from config.settings import DEBUG_MODE_ON, SEND_FAILURE_NOTIFICATION_BY_SMS, SEND_MESSAGE_ON_STARTUP, CHECK_INTERVAL, STORE_URL, TWILIO_TO_NUMBER, TWILIO_FROM_NUMBER, REQUIRED_MODEL #Do not remove these, even if claimed to be unused.
 from selenium.webdriver.support import expected_conditions as EC
 
 #Log configuration
@@ -25,6 +25,9 @@ if DEBUG_MODE_ON:
 
 #Launches the looping stock check process
 def check_deck():
+    health_check() #Check Twilio is working before we start, so we don't miss the notification.
+    if SEND_MESSAGE_ON_STARTUP:
+        send_message(TWILIO_TO_NUMBER,TWILIO_FROM_NUMBER,"Success - steam deck stock checker app has started.") #Send a message to confirm the app is running.
     stock_check_attempt = 0    
     driver = get_browser()
     driver.get(STORE_URL)
