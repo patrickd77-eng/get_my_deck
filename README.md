@@ -101,7 +101,7 @@ That's it. Just leave it running. So long as the terminal window is open and it'
 It will need to be running 24/7 somewhere and be uninterrupted. Whether that's a spare PC/Laptop somewhere, or a cloud service, is your call. I personally run it on a Windows 11 mini PC in my home which is only accessed remotely. I heavily tested this and it's very reliable. The only thing I can think of would be that you might have trouble with environment variables or logging files when hosting in a cloud environment, such as Azure Functions.
 
 ## How do I uninstall?
-Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size. Assumedly if you're doing so, it either sucked and you hate it OR you got your Steam Deck. If so, congratulations!
+Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size. Assumedly if you're doing so, it either sucked and you hate it OR you got your Steam Deck. If so, congratulations! To delete globally intalled python packages, see (here)[https://stackoverflow.com/questions/11248073/how-do-i-remove-all-packages-installed-by-pip]. 
 
 ## Is it safe?
 Yes, you can read all the code, it's open source. If you don't know how, you can use GPT to tell you whether it's safe or not. It has no hidden code (no compiled files) and no executables. Check with VirusTotal if you're not sure. Also, you won't get in trouble for using it, but don't monetise it. I will never ask for money for this, and anyone asking for money is likely scamming you.
@@ -113,6 +113,9 @@ You should have permissions to create files/folders wherever you're hosting it. 
 I am not a Python dev by trade, and this is not meant to be a lesson in engineering. There are likely many "non pythonic" things, bad practises and violations of things like DRY/KIS etc. It was a quick hobby project over a few hours, so that I could find out when my preferred SD was in stock. If you like to critique open source repos, feel free to make PRs and I will test and merge when I have time. The code and logging is intentionally verbose so that people who don't code can figure it out and understand what it is doing.
 Please note that changes to the Steam Store's page structure will immediately break the app, this could be silent and overnight. Only a debug and codefix will sort it out.
 This is a heavily modified fork of https://github.com/maroofc/get_my_deck. Thanks to the original authors.
+
+## Warning about Env Vars / Passwords etc
+I only used an ignored .env file so that people's Twilio details are secure. If you decide to upload your code anywhere, or expose your Twilio details, I am not responsible for any cost or problems this causes you. People have automated tools that look for exposed passwords on GitHub for example. Just a friendly warning to be careful with your Twilio details!
 
 # Original author's instructions (for Linux) 
 
