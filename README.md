@@ -2,7 +2,7 @@
 A simple stock checker which checks the Steam Deck Refurb page for stock and then texts you when it finds stock.
 Since there doesn't seem to be any for refurbs out there and definitely no official way of doing this. Other options for webscrapers were paid.
 You can filter for one model or all of them.
-You must read all the steps below.
+You should read all the steps below.
 
 # Instructions for running on Windows 10/11 - Start Here
 
@@ -11,39 +11,39 @@ This app will run on Windows (and also should run on Linux), provided you have t
 # First - Download Me!
 Just download the repo via GitHub or use git clone if you're able to. If it comes compressed, then extract it. It should be a folder. This link should work and will download the develop branch: https://github.com/patrickd77-eng/get_my_deck/archive/refs/heads/develop.zip
 
-1. **REQUIRED: Install Python**:
+**REQUIRED: Install Python**:
 Make sure Python is installed on your system. You can download the latest stable Windows copy from [python.org](https://www.python.org/downloads/). This will allow you to use 'pip' (python package installer) too. E.g. use 'Windows installer (64-bit)'.
 
-2. **REQUIRED: Chrome Browser**:
+**REQUIRED: Chrome Browser**:
 Ensure you have [Google Chrome](https://www.google.com/chrome/) installed on your system. This is required so that selenium can use it. You will never see the browser when the app is running, this is intended, it's called 'headless' mode.
 
-3. **REQUIRED: Install Required Packages**:
+**REQUIRED: Install the app's dependencies**:
 Navigate to the get_my_deck folder. Open a command prompt here, or already be in the terminal.
 You can do this easily by clicking the explorer navigation bar and typing cmd. You can also press WIN+R and then cmd + ENTER.
 The command terminal MUST be scoped to the correct folder (get_my_deck). You can't just open terminal anywhere and type this stuff in.
 
 First, let's ensure you have the latest Python package installer.
-
-    ```sh
-    py -m pip install --upgrade pip    
-    ```
+```
+py -m pip install --upgrade pip    
+```
 Then after that:
+```
+py -m pip install -r requirements.txt
+```
 
-    ```sh
-    py -m pip install -r requirements.txt
-    ```
+If you extend this app, then you can add any new packages that you might add to the requirements file. If you don't want to install packages globally (not a big deal), you can make a virtual env or something.
 
-If you extend this then you can add any new packages that you might add to the requirements file. If you don't want to install packages globally (not a big deal), you can make a virtual env or something.
-
-4. **REQUIRED: Make a Twilio Individual account**
+**REQUIRED: Make and configure Twilio Individual account**
 You'll need a government ID and a trial account. The money should last a good while, it's like 15 USD.
-You'll need to buy a phone number with the trial money, register a 'bundle' so that you're using it legally (hence the government ID) and also verify your own number so you can send to it.
-Once done, Twilio is ready.
-There's plenty of guides online on how to do this.
+You'll need to buy a phone number with SMS capabilities in the UK with the trial money.
+You'll also need to register a 'regulatory compliance bundle' so that you're using it legally (hence the government ID).
+You'll need to verify your own number on the dashboard, so that you can send to it. You will only be able to send to verified numbers.
+Once done, Twilio is ready to go.
+There's plenty of guides online on how to do this!
 
-5. **REQUIRED: Setup Local Environments Variables File**: 
+**REQUIRED: Setup Local Environments Variables File**: 
 
-Create a file called '.env' in the same folder as the codebase. It doesn't need a name, just the extension, so it should indeed just look like .env. Then use the example below to populate it... Where it says "get your own!" you'll need to change those before it'll run.
+Create a file called '.env' in the same folder as the codebase. It doesn't need a name, just the extension, so it should indeed just look like .env. Then use the example below to populate it... Where it says "get your own!" you'll need to change those before it'll run. If you can't see file extensions in windows, do [this](https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions/#:~:text=To%20show%20file%20extensions%20on,%3E%20Show%20%3E%20File%20Name%20Extensions.).
 
 ```
 # Twilio Credentials
@@ -88,7 +88,7 @@ STORE_URL="https://store.steampowered.com/sale/steamdeckrefurbished/"
 # ^Used to determine which storefront the app will use. Only tested with UK, sorry!
 ```
 
-6. **Now, how do I run the program?**: Execute the script using Python. Open a terminal or command prompt, navigate to the get_my_deck containing main.py, and run:
+6. **REQUIRED: Finally, start the app**: Execute the script using Python. Open a terminal or command prompt, navigate to the get_my_deck containing main.py, and run:
 
 ```
 python main.py
@@ -96,12 +96,12 @@ python main.py
 
 That's it. Just leave it running. So long as the terminal window is open and it's writing stuff out, it's active. If it crashes, it'll tell you. If it finds stock, it'll tell you. In either case, you'd need to start it again. To do that, you just repeat the same command in this step.
 
-#FAQs
+# FAQs
 ## Where should I run this? (Hosting)
 It will need to be running 24/7 somewhere and be uninterrupted. Whether that's a spare PC/Laptop somewhere, or a cloud service, is your call. I personally run it on a Windows 11 mini PC in my home which is only accessed remotely. I heavily tested this and it's very reliable. The only thing I can think of would be that you might have trouble with environment variables or logging files when hosting in a cloud environment, such as Azure Functions.
 
 ## How do I uninstall?
-Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size.
+Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size. Assumedly if you're doing so, it either sucked and you hate it OR you got your Steam Deck. If so, congratulations!
 
 ## Is it safe?
 Yes, you can read all the code, it's open source. If you don't know how, you can use GPT to tell you whether it's safe or not. It has no hidden code (no compiled files) and no executables. Check with VirusTotal if you're not sure. Also, you won't get in trouble for using it, but don't monetise it. I will never ask for money for this, and anyone asking for money is likely scamming you.
