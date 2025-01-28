@@ -101,11 +101,7 @@ That's it. Just leave it running. So long as the terminal window is open and it'
 It will need to be running 24/7 somewhere and be uninterrupted. Whether that's a spare PC/Laptop somewhere, or a cloud service, is your call. I personally run it on a Windows 11 mini PC in my home which is only accessed remotely. I heavily tested this and it's very reliable. The only thing I can think of would be that you might have trouble with environment variables or logging files when hosting in a cloud environment, such as Azure Functions.
 
 ## How do I uninstall?
-<<<<<<< HEAD
 Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size. Assumedly if you're doing so, it either sucked and you hate it OR you got your Steam Deck. If so, congratulations! To delete globally intalled python packages, see (here)[https://stackoverflow.com/questions/11248073/how-do-i-remove-all-packages-installed-by-pip]. 
-=======
-Just delete the folder get_my_deck. That's it. The tools you installed can be uninstalled via Control Panel / Windows Settings etc. But they're useful to have and small in size. Assumedly if you're doing so, it either sucked and you hate it OR you got your Steam Deck. If so, congratulations!
->>>>>>> 7c0891d7940f97707bea28a707417382d7f27fe8
 
 ## Is it safe?
 Yes, you can read all the code, it's open source. If you don't know how, you can use GPT to tell you whether it's safe or not. It has no hidden code (no compiled files) and no executables. Check with VirusTotal if you're not sure. Also, you won't get in trouble for using it, but don't monetise it. I will never ask for money for this, and anyone asking for money is likely scamming you.
