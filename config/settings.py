@@ -10,9 +10,10 @@ TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_FROM_NUMBER = os.getenv("TWILIO_FROM_NUMBER") 
 TWILIO_TO_NUMBER = os.getenv("TWILIO_TO_NUMBER")
 
-#Debugging/Error handling
+#Debugging/Error/Notification handling
 SEND_FAILURE_NOTIFICATION_BY_SMS = os.getenv("SEND_FAILURE_NOTIFICATION_BY_SMS", "True").lower() == "true"
 DEBUG_MODE_ON = os.getenv("DEBUG_MODE_ON", "False").lower() == "true"
+SEND_MESSAGE_ON_STARTUP = os.getenv("SEND_MESSAGE_ON_STARTUP", "True").lower() == "true"
 
 #Running settings
 REQUIRED_MODEL = os.getenv("REQUIRED_MODEL")

@@ -73,6 +73,8 @@ DEBUG_MODE_ON=False
 
 SEND_FAILURE_NOTIFICATION_BY_SMS=True
 # ^True if you want to be notified when the app crashes while running, via SMS (will cost Twilio credits). False if not. HIGHLY suggest leaving this True.
+SEND_MESSAGE_ON_STARTUP=True
+# ^True if you want to be notified by SMS when the app starts running successfully, False if not.
 
 # Default Model
 REQUIRED_MODEL="OLED_512GB"
