@@ -1,3 +1,16 @@
+#TODO - Get my Twilio deets.
+#TODO - Get running locally 'as is'.
+#TODO - Modernise/tidy author's code as required.
+#TODO - Add ability to filter by country
+#TODO - Add ability to filter by model
+#TODO - Add env vars
+#TODO - Add git ignore to ignore local env vars file
+#TODO - Test locally
+#TODO - Host as az function?
+#TODO - Update readme with instructions
+#TODO - Possibly suggest PR into original author's repo?
+
+
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
